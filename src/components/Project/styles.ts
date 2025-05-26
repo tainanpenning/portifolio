@@ -13,4 +13,5 @@ export const LinkButton = styled.a`
   padding: 8px;
   margin-top: 24px;
   display: inline-block;
+  cursor: pointer;
 `

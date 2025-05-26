@@ -1,9 +1,22 @@
+import Avatar from '../../components/Avatar'
+import Paragraph from '../../components/Paragraph'
 import Title from '../../components/Title'
+
+import { Description, ThemeButton, SidebarContainer } from './styles'
 
 const Sidebar = () => (
   <aside>
-    <img src="https://github.com/tainanpenning.png" />
-    <Title fontSize={20}>Tainan</Title>
+    <SidebarContainer>
+      <Avatar />
+      <Title fontSize={20}>Tainan</Title>
+      <Paragraph type="secondary" fontSize={16}>
+        tainanpenning
+      </Paragraph>
+      <Description type="principal">
+        Aprendendo Full-Stack com Phyton
+      </Description>
+      <ThemeButton>Trocar tema</ThemeButton>
+    </SidebarContainer>
   </aside>
 )
 

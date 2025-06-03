@@ -4,7 +4,11 @@ import Title from '../../components/Title'
 
 import { Description, ThemeButton, SidebarContainer } from './styles'
 
-const Sidebar = () => (
+type Props = {
+  changeTheme: () => void
+}
+
+const Sidebar = (props: Props) => (
   <aside>
     <SidebarContainer>
       <Avatar />
@@ -15,7 +19,7 @@ const Sidebar = () => (
       <Description type="principal">
         Aprendendo Full-Stack com Phyton
       </Description>
-      <ThemeButton>Trocar tema</ThemeButton>
+      <ThemeButton onClick={props.changeTheme}>Trocar tema</ThemeButton>
     </SidebarContainer>
   </aside>
 )

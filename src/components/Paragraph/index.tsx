@@ -1,7 +1,8 @@
+import { JSX } from 'react'
 import { P as ParagraphStyle } from './styles'
 
 export type Props = {
-  children: string
+  children: JSX.Element | string
   type?: 'principal' | 'secondary'
   fontSize?: number
 }

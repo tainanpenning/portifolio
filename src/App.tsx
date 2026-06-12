@@ -9,7 +9,8 @@ import lightTheme from './themes/Light'
 import darkTheme from './themes/Dark'
 
 function App() {
-  const [usingDarkTheme, setUsingDarkTheme] = useState(false)
+  const [usingDarkTheme, setUsingDarkTheme] = useState(true)
+  const [activeTab, setActiveTab] = useState<'about' | 'projects'>('about')
 
   function changeTheme() {
     setUsingDarkTheme(!usingDarkTheme)
@@ -19,10 +20,15 @@ function App() {
     <ThemeProvider theme={usingDarkTheme ? darkTheme : lightTheme}>
       <GlobalStyle />
       <Container>
-        <Sidebar changeTheme={changeTheme} />
+        <Sidebar
+          changeTheme={changeTheme}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          isDarkTheme={usingDarkTheme}
+        />
         <main>
-          <About />
-          <Projects />
+          <About activeTab={activeTab} />
+          <Projects activeTab={activeTab} />
         </main>
       </Container>
     </ThemeProvider>

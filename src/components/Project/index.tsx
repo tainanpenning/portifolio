@@ -3,11 +3,19 @@ import Title from '../Title'
 
 import { Card, LinkButton } from './styles'
 
-const Project = () => (
+type Props = {
+  title: string
+  description: string
+  link: string
+}
+
+const Project = (props: Props) => (
   <Card>
-    <Title>Projeto Lista de tarefas</Title>
-    <Paragraph type="secondary">Lista de tarefas com VueJS</Paragraph>
-    <LinkButton>Visualizar</LinkButton>
+    <Title>{props.title}</Title>
+    <Paragraph type="secondary">{props.description}</Paragraph>
+    <LinkButton href={props.link} target="_blank" rel="noreferrer">
+      Visualizar
+    </LinkButton>
   </Card>
 )
 

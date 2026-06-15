@@ -20,7 +20,7 @@ const About = ({ activeTab }: Props) => (
       me tornar um desenvolvedor mais completo.
     </Paragraph>
     <GithubSection>
-      <img src="https://github-readme-stats.vercel.app/api?username=tainanpenning&show_icons=true&theme=transparent&include_all_commits=true&count_private=false" />
+      <img src="https://github-readme-stats.vercel.app/api?username=tainanpenning&show_icons=true&theme=transparent&count_private=false" />
       <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tainanpenning&layout=compact&langs_count=7&theme=transparent" />
     </GithubSection>
   </SectionContent>
